@@ -15,8 +15,7 @@ function [x,y,t,pol,cam] =BackgroundFilter(x,y,t,pol,cam,xdim,ydim,dt)
             index(i)=NaN;
         end
         
-        if ~(xs==1 || xs==xdim || ys==1 || ys==ydim)        
-            lastTimesMap(xs, ys) = ts;
+        if ~(xs==1 || xs==xdim || ys==1 || ys==ydim)
             lastTimesMap(xs-1, ys) = ts;
             lastTimesMap(xs+1, ys) = ts;
             lastTimesMap(xs, ys-1) = ts;
