@@ -94,19 +94,19 @@ function [] = ExtractEventsToFramesAndMeanLabels(...
             IMovie(4,:,:,nbFrame) = I4n;
             
             %
-            pose(1,:) = nanmean(XYZPOS.XYZPOS.head(last_k:k,:),1);
-            pose(2,:) = nanmean(XYZPOS.XYZPOS.shoulderR(last_k:k,:),1);
-            pose(3,:) = nanmean(XYZPOS.XYZPOS.shoulderL(last_k:k,:),1);
-            pose(4,:) = nanmean(XYZPOS.XYZPOS.elbowR(last_k:k,:),1);
-            pose(5,:) = nanmean(XYZPOS.XYZPOS.elbowL(last_k:k,:),1);
-            pose(6,:) = nanmean(XYZPOS.XYZPOS.hipR(last_k:k,:),1);
-            pose(7,:) = nanmean(XYZPOS.XYZPOS.hipL(last_k:k,:),1);
-            pose(8,:) = nanmean(XYZPOS.XYZPOS.handR(last_k:k,:),1);
-            pose(9,:) = nanmean(XYZPOS.XYZPOS.handL(last_k:k,:),1);
-            pose(10,:) = nanmean(XYZPOS.XYZPOS.kneeR(last_k:k,:),1);
-            pose(11,:) = nanmean(XYZPOS.XYZPOS.kneeL(last_k:k,:),1);
-            pose(12,:) = nanmean(XYZPOS.XYZPOS.footR(last_k:k,:),1);
-            pose(13,:) = nanmean(XYZPOS.XYZPOS.footL(last_k:k,:),1);
+            pose(1,:) = mean(XYZPOS.XYZPOS.head(last_k:k,:),1);
+            pose(2,:) = mean(XYZPOS.XYZPOS.shoulderR(last_k:k,:),1);
+            pose(3,:) = mean(XYZPOS.XYZPOS.shoulderL(last_k:k,:),1);
+            pose(4,:) = mean(XYZPOS.XYZPOS.elbowR(last_k:k,:),1);
+            pose(5,:) = mean(XYZPOS.XYZPOS.elbowL(last_k:k,:),1);
+            pose(6,:) = mean(XYZPOS.XYZPOS.hipR(last_k:k,:),1);
+            pose(7,:) = mean(XYZPOS.XYZPOS.hipL(last_k:k,:),1);
+            pose(8,:) = mean(XYZPOS.XYZPOS.handR(last_k:k,:),1);
+            pose(9,:) = mean(XYZPOS.XYZPOS.handL(last_k:k,:),1);
+            pose(10,:) = mean(XYZPOS.XYZPOS.kneeR(last_k:k,:),1);
+            pose(11,:) = mean(XYZPOS.XYZPOS.kneeL(last_k:k,:),1);
+            pose(12,:) = mean(XYZPOS.XYZPOS.footR(last_k:k,:),1);
+            pose(13,:) = mean(XYZPOS.XYZPOS.footL(last_k:k,:),1);
             
             poseMovie(:,:,nbFrame) = pose;
             
